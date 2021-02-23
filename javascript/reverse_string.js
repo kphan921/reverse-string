@@ -1,14 +1,19 @@
 function reverseString(str) {
-  // type your code here
+  let reversedString = '';
+  for (i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i];
+  }
+  return reversedString;
+
 }
 
 if (require.main === module) {
-  // add your own tests in here
+  console.log(reverseString('hi'))
   console.log("Expecting: 'ih'");
   console.log("=>", reverseString('ih'));
 
   console.log("");
-
+  console.log(reverseString("catbaby"));
   console.log("Expecting: 'ybabtac'");
   console.log("=>", reverseString('catbaby'));
 }
@@ -16,4 +21,6 @@ if (require.main === module) {
 module.exports = reverseString;
 
 // Please add your pseudocode to this file
-// And a written explanation of your solution
+// create empty string
+// iterate str backward
+// add the charater at i to the empty string
